@@ -22,9 +22,9 @@ module Koala
           key = "#{prefix}%5B#{key}%5D" if prefix
 
           case value
-          when Array
-            values = value.inject([]) { |a,v| a << [nil, v] }
-            process_params(values, key, all, &block)
+          # when Array
+          #   values = value.inject([]) { |a,v| a << [nil, v] }
+          #   process_params(values, key, all, &block)
           when Hash
             process_params(value, key, all, &block)
           else
